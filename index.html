@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8">
+    <title>Klubben · samfundet.no</title>
+    
+    <link href="http://fonts.googleapis.com/css?family=Amatic+SC:700,400|Playfair+Display+SC:400,700italic,700,400italic" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="application.css" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+      
+      function updateTime(now){
+        var targetDate = new Date("2013-01-17T20:00");
+        var timeLeft = targetDate - now;
+      
+        var days = timeLeft / (3600 * 24 * 1000);
+        var hours = days % Math.floor(days) * 24;
+        var minutes = hours % Math.floor(hours) * 60;
+        var seconds = minutes % Math.floor(minutes) * 60;
+      
+        $('.days').text(""+parseInt(days));
+        $('.hours').text(""+parseInt(hours));
+        $('.minutes').text(""+parseInt(minutes));
+        $('.seconds').text(""+parseInt(seconds));
+      };
+      
+      jQuery(function(){
+        var now = new Date();
+        updateTime(now);
+        setInterval(function(){
+          now = new Date();
+          updateTime(now)
+        }, 1000);
+      });
+    </script>
+    <!-- <link href="css/bootstrap-responsive.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <div id="topheader" class="container">
+      <a href="http://samfundet.no">
+        <img src="img/small-logo.png" alt="Studentersamfundet i Trondhjem">
+      </a>
+    </div>
+    <div id="body" class="container">
+      <h1>
+        <span class="herp">
+          Velkommen til<br>
+          nyåpning av Klubben<br>
+          på torsdag!
+        </span>
+        <small class="derp">
+          <span class="days">X</span> dager
+          <span class="hours">X</span> timer
+          <br>
+          <span class="minutes">X</span> minutter
+          <span class="seconds">X</span> sekunder
+        </small>
+      </h1>
+      <div id="pop">
+        <div class="head">
+          <div class="info">
+            <div class="boble">Byens billigste på torsdager!</div>
+            <div class="liten-boble">Vi har mange nye, fine ting</div>
+          </div>
+        </div>
+      </div>
+      <div class="logo"></div>
+    </div>
+  </body>
+</html>
+

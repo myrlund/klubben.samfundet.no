@@ -1,0 +1,98 @@
+
+/*@font-face {
+    font-family: "PlayfairDisplaySC_Bold";
+    src: url("./fonts/DejaVuSans.ttf") format("ttf");
+}
+*/
+body {
+  background: #000;
+  color: #fff;
+  margin: 0;
+}
+
+#topheader {
+  padding: 5px 0 3px;
+}
+
+#body {
+  background: url(img/body-bg.png) no-repeat center top;
+  min-height: 746px;
+}
+
+h1 {
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-family: "Playfair Display SC", serif;
+  padding-left: 1em;
+  position: relative;
+}
+  h1 .herp {
+    font-size: 62px;
+    line-height: 1.4;
+  }
+  h1 .derp {
+    position: absolute;
+    font-size: 24px;
+    color: #fff;
+    padding-left: 1.0em;
+    top: 100%;
+    margin-top: -52px;
+    width: 400px;
+    font-weight: bold;
+    text-transform: none;
+  }
+    h1 .derp span {
+      font-size: 1.5em;
+    }
+
+#pop {
+  position: relative;
+  margin-top: 50px;
+  font-family: "Amatic SC";
+}
+  #pop .head {
+    background: url(img/hode.png) no-repeat left top;
+    position: absolute;
+    width: 244px;
+    height: 274px;
+    left: 100px;
+  }
+    #pop .head .info {
+      display: none;
+    }
+    #pop .head:hover .info {
+      display: block;
+    }
+    
+    .boble {
+      padding: 60px 25px 0 50px;
+      text-align: center;
+      width: 202px;
+      height: 211px;
+      background: url(img/boble.png) no-repeat left top;
+      position: absolute;
+      left: 100%;
+      top: 15px;
+      margin-left: 10px;
+      font-size: 48px;
+      line-height: 1.2;
+    }
+    .liten-boble {
+      padding: 27px 0 0;
+      text-align: center;
+      width: 231px;
+      height: 70px;
+      background: url(img/liten-boble.png) no-repeat left top;
+      position: absolute;
+      left: 100%;
+      top: 100%;
+      margin-top: 0px;
+      margin-left: -30px;
+      font-size: 26px;
+    }
+
+.logo {
+  margin-top: 340px;
+  height: 87px;
+  background: url(img/logo.png) no-repeat right top;
+}
