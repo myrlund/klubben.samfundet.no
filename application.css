@@ -11,6 +11,8 @@ body {
 }
 
 #topheader {
+  position: relative;
+  z-index: 1;
   padding: 5px 0 3px;
 }
 
@@ -19,6 +21,7 @@ body {
   min-height: 746px;
 }
   #body .bg {
+    z-index: 0;
     position:fixed; 
     top:-50%; 
     left:-50%; 
@@ -34,6 +37,12 @@ body {
       margin:auto; 
       min-width:50%;
       min-height:50%;
+    }
+    #body .logo {
+      position: relative;
+      margin-top: 340px;
+      height: 87px;
+      background: url(img/logo.png) no-repeat right top;
     }
 
 h1 {
@@ -108,8 +117,3 @@ h1 {
       font-size: 26px;
     }
 
-.logo {
-  margin-top: 340px;
-  height: 87px;
-  background: url(img/logo.png) no-repeat right top;
-}
