@@ -15,15 +15,15 @@
         var targetDate = new Date("2013-01-17T20:00");
         var timeLeft = targetDate - now;
       
-        var days = timeLeft / (3600 * 24 * 1000);
-        var hours = days % Math.floor(days) * 24;
-        var minutes = hours % Math.floor(hours) * 60;
-        var seconds = minutes % Math.floor(minutes) * 60;
+        var days = Math.floor(timeLeft / 86400000) || 0;
+        var hours = Math.floor((timeLeft % 86400000) / 3600000) || 0;
+        var minutes = Math.floor((timeLeft % 3600000) / 60000) || 0;
+        var seconds = Math.floor((timeLeft % 60000) / 1000) || 0;
       
-        $('.days').text(""+parseInt(days));
-        $('.hours').text(""+parseInt(hours));
-        $('.minutes').text(""+parseInt(minutes));
-        $('.seconds').text(""+parseInt(seconds));
+        $('.days').text(""+days);
+        $('.hours').text(""+hours);
+        $('.minutes').text(""+minutes);
+        $('.seconds').text(""+seconds);
       };
       
       jQuery(function(){
